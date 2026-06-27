@@ -1,0 +1,42 @@
+.review-card {
+    background-color: #f1f4fa;
+    border: 1px solid #a4aec8;
+    border-radius: 20px;
+    padding: 16px 24px 16px 24px;
+    height: 175px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-stars {
+    display: flex;
+    gap: 8px;
+}
+
+.star-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.review-text {
+    font-family: 'Inter';
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    color: #24262b;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.review-author {
+    font-family: 'Jersey 15';
+    font-size: 20px;
+    color: #a4aec8;
+    margin-top: 8px;
+    align-self: baseline;
+}

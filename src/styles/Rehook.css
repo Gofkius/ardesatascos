@@ -1,0 +1,54 @@
+.rehook-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 128px;
+    
+    h1{
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .hook{
+        width: 350px;
+    }
+
+    .button-container{
+        gap: 10px;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: row;
+        h1{
+            font-family: "Jersey 15";
+            font-size: 20px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        .callbutton{
+            gap: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 233px;
+            height: 46px;
+            background-color: #24262B;
+            border-radius: 15px;
+            color: #FFFFFF;
+        }
+        .messagebutton{
+            gap: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 165px;
+            height: 46px;
+            border-radius: 15px;
+            background-color: #90EF54;
+            color: #000000;
+        }
+    }
+}

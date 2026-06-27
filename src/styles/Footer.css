@@ -1,0 +1,38 @@
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 128px 32px 128px 32px;
+    background-color: #24262B;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-section{
+        h1{
+            color: rgb(255, 255, 255, 0.6);
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    .footer-section-redes{
+        .redes{
+            display: flex;
+            gap: 10px;
+        }
+        a img{
+            width: 25px;
+        }
+        h1{
+            color: rgb(255, 255, 255, 0.6);
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+    }
+}

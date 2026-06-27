@@ -1,0 +1,42 @@
+@import "@fontsource/jersey-15";
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0 12px 0 12px;
+    height: 53px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+    .navbar-buttons{
+        gap: 48px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        h1{
+            font-size: 16px;
+        }
+        h1 .navbar-callbutton{
+            font-family: "Jersey 15";
+        }
+
+        .navbar-callbutton{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            width: 165px;
+            height: 30px;
+            background-color: #24262B;
+            color: #FFFFFF;
+            border-radius: 15px;
+        }
+    }
+}

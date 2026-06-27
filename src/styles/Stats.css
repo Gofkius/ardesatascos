@@ -1,0 +1,35 @@
+.stats-container{
+    display: flex;
+    height: 500px;
+    background-color: #24262B;
+    position: relative;
+    overflow: hidden;
+
+    img{
+        height: 100%;
+    }
+    .stats{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.statistic{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+
+    .statistic-title{
+        color: rgb(255, 255, 255, 0.75);
+        font-size: 16px;
+    }
+
+    .statistic-number{
+        font-size: 96px;
+        color: #FFFFFF;
+        font-family: "Jersey 15";
+    }
+}

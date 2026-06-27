@@ -1,0 +1,39 @@
+.reviews-container {
+    margin-top: 128px;
+    margin-bottom: 128px;
+    position: relative;
+    -webkit-mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        black 20%, 
+        black 80%, 
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        black 20%, 
+        black 80%, 
+        transparent
+    );
+}
+
+/* Alternative: Use mask-image for smoother blur effect */
+/* 
+.reviews-container {
+    -webkit-mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        black 10%, 
+        black 90%, 
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        black 10%, 
+        black 90%, 
+        transparent
+    );
+}
+*/

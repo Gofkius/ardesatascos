@@ -1,0 +1,115 @@
+@import "@fontsource/jersey-15";
+
+.hero-container{
+    display: flex;
+    justify-content: center;
+    height: 75dvh;
+    padding: 150px;
+    gap: 150px;
+
+    .hero-hook{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .hook{
+            font-size: 36px;
+            width: 409px;
+        }
+        .sub-hook{
+            margin-top: 16px;
+            font-size: 16px;
+            color:rgb(0, 0, 0, 0.6);
+            width: 380px;
+        }
+
+        .button-container{
+            gap: 10px;
+            margin-top: 48px;
+            display: flex;
+            flex-direction: row;
+            h1{
+                font-family: "Jersey 15";
+                font-size: 20px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+            }
+            .callbutton{
+                gap: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 233px;
+                height: 46px;
+                background-color: #24262B;
+                border-radius: 15px;
+                color: #FFFFFF;
+            }
+            .messagebutton{
+                gap: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 165px;
+                height: 46px;
+                border-radius: 15px;
+                background-color: #90EF54;
+                color: #000000;
+            }
+        }
+    }
+    .hero-image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        
+        .hero-pipe{
+            position: relative;
+
+        }
+        .hero-red{
+            background-color: red;
+            border-radius: 45px;
+            width: 520px;
+            height: 490px;
+            position: relative;
+            z-index: -1;
+
+            .pj1, .water-squirt{
+                width: 100px;
+                height: 100px;
+            }
+
+            .pipe-crack{
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 270px;
+                left: 333px;
+                z-index: 1;
+            }
+
+            .pj1{
+                position: absolute;
+                top: 172px;
+                left: 200px;
+            }
+
+            .water-squirt{
+                position: absolute;
+                top: 172px;
+                left: 300px;
+            }
+            .pipe{
+                position: absolute;
+                top: 0;
+                left: -100px;
+                -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+                mask-image: linear-gradient(to right, black 90%, transparent 100%);
+            }
+        }
+    }
+}
