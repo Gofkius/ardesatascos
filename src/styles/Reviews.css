@@ -2,6 +2,9 @@
     margin-top: 128px;
     margin-bottom: 128px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     -webkit-mask-image: linear-gradient(
         to right, 
         transparent, 
@@ -16,6 +19,14 @@
         black 80%, 
         transparent
     );
+}
+
+@media (max-width: 640px) {
+    .reviews-container {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        gap: 12px;
+    }
 }
 
 /* Alternative: Use mask-image for smoother blur effect */

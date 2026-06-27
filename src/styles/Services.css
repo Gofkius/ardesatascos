@@ -1,6 +1,7 @@
 .services-container{
     display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 986px;
     position: relative;
     gap: 36px;
     margin-bottom: 128px;
@@ -12,13 +13,29 @@
 
     .pipe-container{
         display: flex;
+        flex-direction: row;
         position: absolute;
         top: 33px;
-        left: 0;
-        img{
+        left: -100vw;
+        right: calc(100% - 396px);
+        z-index: 10;
+        pointer-events: none;
+
+        .pipe-body {
+            flex: 1;
+            background-image: url('/src/assets/pipe-body.png');
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: right center;
+        }
+
+        .pipe-head {
             height: 270px;
+            width: auto;
+            flex-shrink: 0;
         }
     }
+
     .red-lbig{
         display: flex;
         flex-direction: column;
@@ -32,6 +49,14 @@
             height: 250px;
             width: 250px;
             margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .text {
+                text-align: center;
+            }
         }
 
         .light-big{
@@ -64,5 +89,147 @@
             height: 140px;
         }
     }
+}
 
+@media (min-width: 640px) and (max-width: 1240px) {
+    .services-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        padding: 0 24px;
+        margin-bottom: 96px;
+
+        .text {
+            font-size: 22px;
+        }
+
+        .pipe-container {
+            display: flex;
+            top: 25px;
+            right: calc(35.7143% + 289.43px);
+            
+            .pipe-head {
+                height: 160px;
+            }
+        }
+
+        .red-lbig {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            flex: 1.8;
+
+            .red-box {
+                width: 250px;
+                height: 250px;
+                padding: 30px;
+                border-radius: 35px;
+                box-sizing: border-box;
+                background-color: red;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: auto;
+
+                .text {
+                    text-align: center;
+                }
+            }
+
+            .light-big {
+                width: 100%;
+                height: 250px;
+                min-height: 250px;
+                padding: 30px;
+                border-radius: 35px;
+                box-sizing: border-box;
+                background-color: #F1F4FA;
+            }
+        }
+
+        .light-green {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            flex: 1;
+
+            .light {
+                width: 100%;
+                height: 290px;
+                min-height: 290px;
+                padding: 30px;
+                border-radius: 35px;
+                box-sizing: border-box;
+                background-color: #F1F4FA;
+            }
+
+            .green {
+                width: 100%;
+                height: 210px;
+                min-height: 210px;
+                padding: 30px;
+                border-radius: 35px;
+                box-sizing: border-box;
+                background-color: #90EF54;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0 16px;
+        margin-bottom: 64px;
+
+        .pipe-container {
+            display: none;
+        }
+
+        .text {
+            font-size: 22px;
+        }
+
+        .red-lbig, .light-green {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            gap: 24px;
+
+            .red-box, .light-big, .light, .green {
+                width: 100%;
+                max-width: 320px;
+                padding: 30px;
+                border-radius: 30px;
+                box-sizing: border-box;
+            }
+
+            .red-box {
+                height: auto;
+                min-height: 150px;
+                margin-left: unset;
+            }
+
+            .light-big {
+                height: auto;
+                min-height: 180px;
+            }
+
+            .light {
+                height: auto;
+                min-height: 180px;
+            }
+
+            .green {
+                height: auto;
+                min-height: 120px;
+            }
+        }
+    }
 }

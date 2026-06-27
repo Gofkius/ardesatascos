@@ -38,6 +38,14 @@
             background-color: #24262B;
             border-radius: 15px;
             color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+
+            &:hover {
+                background-color: #3a3d44;
+                transform: translateY(-2px);
+            }
         }
         .messagebutton{
             gap: 4px;
@@ -49,6 +57,44 @@
             border-radius: 15px;
             background-color: #90EF54;
             color: #000000;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+
+            &:hover {
+                background-color: #7adc3e;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .rehook-container {
+        margin-bottom: 64px;
+        padding: 0 16px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .hook {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .button-container {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+
+            .callbutton, .messagebutton {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
         }
     }
 }

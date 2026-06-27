@@ -1,0 +1,118 @@
+.cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 780px;
+    background: #24262B;
+    color: white;
+    border-radius: 15px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.cookie-banner-text {
+    flex: 1;
+
+    h2 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: white;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+
+        a {
+            color: #90EF54;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+}
+
+.cookie-banner-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+
+    .cookie-accept {
+        background: #90EF54;
+        color: #24262B;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        white-space: nowrap;
+        font-family: inherit;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    .cookie-reject {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.6);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        font-family: inherit;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        bottom: 16px;
+        padding: 20px 20px;
+        width: calc(100% - 32px);
+    }
+
+    .cookie-banner-actions {
+        flex-direction: row;
+
+        .cookie-accept,
+        .cookie-reject {
+            flex: 1;
+            text-align: center;
+        }
+    }
+}

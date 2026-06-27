@@ -8,7 +8,7 @@
     padding: 0 12px 0 12px;
     height: 53px;
     position: sticky;
-    z-index: 1;
+    z-index: 100;
     top: 0;
 
     .navbar-buttons{
@@ -18,6 +18,11 @@
         flex-direction: row;
         align-items: center;
         
+        .navbar-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
         h1{
             font-size: 16px;
         }
@@ -37,6 +42,37 @@
             background-color: #24262B;
             color: #FFFFFF;
             border-radius: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+
+            &:hover {
+                background-color: #3a3d44;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar-container {
+        padding: 0 16px;
+        
+        .navbar-buttons {
+            gap: 16px;
+            
+            h1 {
+                font-size: 14px;
+            }
+            
+            .navbar-callbutton {
+                width: 110px;
+                height: 32px;
+                
+                h1 {
+                    font-size: 13px;
+                }
+            }
         }
     }
 }

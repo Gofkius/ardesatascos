@@ -5,7 +5,8 @@ const Services = () => {
   return (
     <div className='services-container'>
         <div className='pipe-container'>
-            <img src="/src/assets/green-pipe.png" alt="Pipe" />
+            <div className='pipe-body'></div>
+            <img className='pipe-head' src="/src/assets/pipe-head.png" alt="Pipe Head" />
         </div>
         <div className='red-lbig'>
             <div className='red-box'>
