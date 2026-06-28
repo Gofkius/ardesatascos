@@ -1,10 +1,12 @@
 import '../styles/Stats.css'
 import Statistic from './Statistic'
 
+import metalPipe from '../assets/metal-pipe.png'
+
 const Stats = () => {
   return (
     <div className='stats-container'>
-        <img src="/src/assets/metal-pipe.png" alt="MPipe" />
+        <img src={metalPipe} alt="MPipe" />
         <div className='stats'>
           <Statistic title='Desatascos realizados' number={15000}/>
           <Statistic title='Disponibilidad' text='24/7'/>

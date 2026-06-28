@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import '../styles/Footer.css'
 
+import facebookIcon from '../assets/facebook.png'
+import instagramIcon from '../assets/instagram.png'
+import whatsappIcon from '../assets/whatsapp.png'
+
 const Footer = () => {
   return (
     <footer className='footer-container'>
@@ -24,13 +28,13 @@ const Footer = () => {
             <h1>Redes</h1>
             <div className='redes'>
                 <a href="https://www.facebook.com/Acondicionamientos.restauraciones/" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/facebook.png" alt="Facebook" />
+                    <img src={facebookIcon} alt="Facebook" />
                 </a>
                 <a href="https://www.instagram.com/ar.tenerife.sl/" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/instagram.png" alt="Instagram" />
+                    <img src={instagramIcon} alt="Instagram" />
                 </a>
                 <a href="https://wa.me/34608238809?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20para%20un%20desatasco." target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/whatsapp.png" alt="WhatsApp" />
+                    <img src={whatsappIcon} alt="WhatsApp" />
                 </a>
             </div>
         </div>

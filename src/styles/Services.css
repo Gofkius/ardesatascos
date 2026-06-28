@@ -23,7 +23,7 @@
 
         .pipe-body {
             flex: 1;
-            background-image: url('/src/assets/pipe-body.png');
+            background-image: url('../assets/pipe-body.png');
             background-repeat: repeat-x;
             background-size: contain;
             background-position: right center;

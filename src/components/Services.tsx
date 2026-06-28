@@ -1,19 +1,22 @@
 import '../styles/Services.css'
 import { TextAnimate } from './ui/text-animate'
 
+import pipeHead from '../assets/pipe-head.png'
+import pj2 from '../assets/pj2.png'
+
 const Services = () => {
   return (
     <div className='services-container'>
         <div className='pipe-container'>
             <div className='pipe-body'></div>
-            <img className='pipe-head' src="/src/assets/pipe-head.png" alt="Pipe Head" />
+            <img className='pipe-head' src={pipeHead} alt="Pipe Head" />
         </div>
         <div className='red-lbig'>
             <div className='red-box'>
                 <TextAnimate animation="fadeIn" by="word" className="text">
                     Desatascos domesticos
                 </TextAnimate>
-                <img className='pj2' src="/src/assets/pj2.png" alt="PJ2" />
+                <img className='pj2' src={pj2} alt="PJ2" />
             </div>
             <div className='light-big'>
                 <TextAnimate animation="fadeIn" by="word" className="text">
