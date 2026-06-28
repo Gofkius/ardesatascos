@@ -13,6 +13,7 @@ const Services = () => {
                 <TextAnimate animation="fadeIn" by="word" className="text">
                     Desatascos domesticos
                 </TextAnimate>
+                <img className='pj2' src="/src/assets/pj2.png" alt="PJ2" />
             </div>
             <div className='light-big'>
                 <TextAnimate animation="fadeIn" by="word" className="text">

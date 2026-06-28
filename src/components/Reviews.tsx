@@ -14,7 +14,7 @@ const Reviews = () => {
 
   return (
     <div className='reviews-container'> 
-        <Marquee repeat={6} className="reviews-marquee">
+        <Marquee pauseOnHover repeat={6} className="reviews-marquee">
             {reviews.map((item, idx) => (
                 <ReviewCard key={idx} stars={item.stars} review={item.review} by={item.by} />
             ))}
