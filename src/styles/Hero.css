@@ -3,7 +3,7 @@
 .hero-container{
     display: flex;
     justify-content: center;
-    height: 75dvh;
+    height: 65svh;
     padding: 150px;
     gap: 150px;
 
@@ -126,6 +126,17 @@
                 -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
                 mask-image: linear-gradient(to right, black 90%, transparent 100%);
             }
+
+            .truck{
+                position: absolute;
+                top: -10px;
+                left: 230px;
+                height: 400px;
+                width: 290px;
+                object-fit: cover;
+                object-position: left;
+                overflow: hidden;
+            }
         }
     }
 }
@@ -209,6 +220,16 @@
                     -webkit-mask-image: linear-gradient(to right, black 97%, transparent 100%);
                     mask-image: linear-gradient(to right, black 97%, transparent 100%);
                 }
+                    .truck{
+                        position: absolute;
+                        top: -30px;
+                        left: 140px;
+                        height: 260px;
+                        width: 190px;
+                        object-fit: cover;
+                        object-position: left;
+                        overflow: hidden;
+                    }
             }
         }
     }
@@ -288,6 +309,17 @@
                     left: -56px;
                     -webkit-mask-image: linear-gradient(to right, black 97%, transparent 100%);
                     mask-image: linear-gradient(to right, black 97%, transparent 100%);
+                }
+
+                .truck{
+                    position: absolute;
+                    top: -25px;
+                    left: 130px;
+                    height: 220px;
+                    width: 160px;
+                    object-fit: cover;
+                    object-position: left;
+                    overflow: hidden;
                 }
             }
         }

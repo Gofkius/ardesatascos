@@ -3,6 +3,7 @@ import Hero from './Hero'
 import Stats from './Stats'
 import Reviews from './Reviews'
 import Services from './Services'
+import Gallery from './Gallery'
 import Rehook from './Rehook'
 import Footer from './Footer'
 import CookieBanner from './CookieBanner'
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Stats />
       <Reviews />
       <Services />
+      <Gallery />
       <Rehook />
       <Footer />
       <CookieBanner />

@@ -1,0 +1,189 @@
+.gallery-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100% - 32px, 986px);
+    margin-inline: auto;
+    margin-bottom: 128px;
+
+    .gallery-title{
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .gallery-subtitle{
+        margin-top: 10px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+
+    .gallery-frame{
+        position: relative;
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .gallery-track{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        border-radius: 45px;
+        aspect-ratio: 16 / 9;
+        background-color: #F1F4FA;
+        scrollbar-width: none;
+    }
+
+    .gallery-track::-webkit-scrollbar{
+        display: none;
+    }
+
+    .gallery-slide{
+        flex: 0 0 100%;
+        min-width: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-slide img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* La foto entera, sin recortes (vertical u horizontal) */
+    .gallery-photo{
+        position: relative;
+        z-index: 1;
+        object-fit: contain;
+    }
+
+    /* Copia difuminada de la misma foto rellenando los laterales */
+    .gallery-backdrop{
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        object-fit: cover;
+        filter: blur(26px) saturate(1.1) brightness(0.92);
+        transform: scale(1.15);
+    }
+
+    .gallery-arrow{
+        position: absolute;
+        z-index: 2; /* por encima de .gallery-photo (z-index: 1) */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 46px;
+        height: 46px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.92);
+        color: #24262B;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .gallery-arrow:hover:not(:disabled){
+        background-color: #FFFFFF;
+    }
+
+    .gallery-arrow:disabled{
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    .gallery-arrow:focus-visible,
+    .gallery-dot:focus-visible{
+        outline: 2px solid #24262B;
+        outline-offset: 2px;
+    }
+
+    .gallery-arrow-left{
+        left: 16px;
+    }
+
+    .gallery-arrow-right{
+        right: 16px;
+    }
+
+    .gallery-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 100%;
+        margin-top: 26px;
+        padding: 0 16px;
+    }
+
+    .gallery-dot{
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border: none;
+        border-radius: 999px;
+        background-color: #D7DCE6;
+        cursor: pointer;
+        transition: width 0.25s ease, background-color 0.25s ease;
+    }
+
+    .gallery-dot.is-active{
+        width: 30px;
+        background-color: #E60000;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-container{
+        margin-bottom: 64px;
+
+        .gallery-title{
+            font-size: 28px;
+        }
+
+        .gallery-subtitle{
+            font-size: 15px;
+        }
+
+        .gallery-frame{
+            margin-top: 32px;
+        }
+
+        .gallery-track{
+            border-radius: 30px;
+            aspect-ratio: 4 / 5;
+        }
+
+        .gallery-arrow{
+            width: 40px;
+            height: 40px;
+        }
+
+        .gallery-arrow-left{
+            left: 10px;
+        }
+
+        .gallery-arrow-right{
+            right: 10px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-container .gallery-dot,
+    .gallery-container .gallery-arrow{
+        transition: none;
+    }
+}

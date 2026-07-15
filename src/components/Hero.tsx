@@ -3,6 +3,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 
 import callIcon from '../assets/call.png'
 import messageIcon from '../assets/message.png'
+import truck from '../assets/truck.png'
 import pj1 from '../assets/pj1.png'
 import waterSquirt from '../assets/water-squirt.png'
 import pipeCrack from '../assets/pipe-crack.png'
@@ -34,9 +35,10 @@ const Hero = () => {
         </div>
         <div className='hero-image'>
             <div className='hero-red'>
-                <img className='pj1' src={pj1} alt="pj1" />
+                {/*<img className='pj1' src={pj1} alt="pj1" />
                 <img className='water-squirt' src={waterSquirt} alt="water-squirt" />
-                <img className='pipe-crack' src={pipeCrack} alt="pipe-crack" />
+                <img className='pipe-crack' src={pipeCrack} alt="pipe-crack" />*/}
+                <img className='truck' src={truck} alt='' />
                 <img className='pipe' src={pipe} alt='' />
             </div>
         </div>

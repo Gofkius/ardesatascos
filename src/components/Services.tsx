@@ -6,38 +6,49 @@ import pj2 from '../assets/pj2.png'*/
 
 const Services = () => {
   return (
-    <div className='services-container'>
+    <section className='services-container' aria-label='Servicios'>
         {/*<div className='pipe-container'>
             <div className='pipe-body'></div>
             <img className='pipe-head' src={pipeHead} alt="Pipe Head" />
         </div>*/}
-        <div className='red-lbig'>
-            <div className='red-box'>
+        <div className='services-main'>
+            <article className='service-card card-red'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
-                    Desatascos domesticos
+                    Desatascos domésticos
                 </TextAnimate>
+                <p className='service-desc'>
+                    Fregaderos, inodoros, bajantes y arquetas. Intervención rápida y sin obras.
+                </p>
                 {/*<img className='pj2' src={pj2} alt="PJ2" />*/}
-            </div>
-            <div className='light-big'>
+            </article>
+            <article className='service-card card-light'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Localización de fugas de agua mediante gas traza y geófono
                 </TextAnimate>
-            </div>
+                <p className='service-desc'>
+                    Detectamos la fuga con precisión, sin abrir paredes ni suelos innecesariamente.
+                </p>
+            </article>
         </div>
-        <div className='light-green'>
-            <div className='light'>
+        <div className='services-side'>
+            <article className='service-card card-light card-tall'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Desatasco con camión de agua a presión
                 </TextAnimate>
-            </div>
-            <div className='green'>
+                <p className='service-desc'>
+                    Limpieza de tuberías y colectores con agua a alta presión.
+                </p>
+            </article>
+            <article className='service-card card-green'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Camión cuba
                 </TextAnimate>
-            </div>
+                <p className='service-desc'>
+                    Vaciado de fosas sépticas y pozos negros.
+                </p>
+            </article>
         </div>
-
-    </div>
+    </section>
   )
 }
 
