@@ -9,17 +9,17 @@ const WHATSAPP = 'https://wa.me/34608238809?text=Hola%2C%20me%20gustar%C3%ADa%20
 const Rehook = () => {
   return (
     <div className='rehook-container'>
-        <h1 className='hook'>
+        <h2 className='hook'>
             ¿Preparado a pedir un presupuesto?
-        </h1>
+        </h2>
         <div className='button-container'>
             <a href={PHONE} className='callbutton'>
-                <img src={callIcon} alt="Tlf" />
-                <h1>Llámanos</h1>
+                <img src={callIcon} alt="" />
+                <span>Llámanos</span>
             </a>
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className='messagebutton'>
-                <img src={messageIcon} alt="Msg" />
-                <h1>Escribenos</h1>
+                <img src={messageIcon} alt="" />
+                <span>Escribenos</span>
             </a>
         </div>
     </div>

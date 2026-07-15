@@ -1,37 +1,37 @@
 import '../styles/Services.css'
 import { TextAnimate } from './ui/text-animate'
 
-import pipeHead from '../assets/pipe-head.png'
-import pj2 from '../assets/pj2.png'
+/*import pipeHead from '../assets/pipe-head.png'
+import pj2 from '../assets/pj2.png'*/
 
 const Services = () => {
   return (
     <div className='services-container'>
-        <div className='pipe-container'>
+        {/*<div className='pipe-container'>
             <div className='pipe-body'></div>
             <img className='pipe-head' src={pipeHead} alt="Pipe Head" />
-        </div>
+        </div>*/}
         <div className='red-lbig'>
             <div className='red-box'>
-                <TextAnimate animation="fadeIn" by="word" className="text">
+                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Desatascos domesticos
                 </TextAnimate>
-                <img className='pj2' src={pj2} alt="PJ2" />
+                {/*<img className='pj2' src={pj2} alt="PJ2" />*/}
             </div>
             <div className='light-big'>
-                <TextAnimate animation="fadeIn" by="word" className="text">
+                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Localización de fugas de agua mediante gas traza y geófono
                 </TextAnimate>
             </div>
         </div>
         <div className='light-green'>
             <div className='light'>
-                <TextAnimate animation="fadeIn" by="word" className="text">
+                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Desatasco con camión de agua a presión
                 </TextAnimate>
             </div>
             <div className='green'>
-                <TextAnimate animation="fadeIn" by="word" className="text">
+                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
                     Camión cuba
                 </TextAnimate>
             </div>

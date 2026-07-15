@@ -5,7 +5,7 @@
     align-items: center;
     margin-bottom: 128px;
     
-    h1{
+    h2{
         font-size: 36px;
         font-weight: 300;
         text-align: center;
@@ -20,7 +20,7 @@
         margin-top: 48px;
         display: flex;
         flex-direction: row;
-        h1{
+        span{
             font-family: "Jersey 15";
             font-size: 20px;
         }
@@ -74,7 +74,7 @@
         margin-bottom: 64px;
         padding: 0 16px;
 
-        h1 {
+        h2 {
             font-size: 28px;
         }
 

@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className='hero-container'>
         <div className='hero-hook'>
-            <TextAnimate animation="fadeIn" by="word" className='hook'>
+            <TextAnimate as="h1" animation="fadeIn" by="word" className='hook'>
                 ¿El agua no traga y los olores no te dejan vivir? Lo solucionamos ahora.
             </TextAnimate>
             <TextAnimate animation="fadeIn" by="word" delay={0.25} className='sub-hook'>
@@ -23,22 +23,21 @@ const Hero = () => {
             </TextAnimate>
             <div className='button-container'>
                 <a href={PHONE} className='callbutton'>
-                    <img src={callIcon} alt="Tlf" />
-                    <h1>Llámanos</h1>
+                    <img src={callIcon} alt="" />
+                    <span>Llámanos</span>
                 </a>
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className='messagebutton'>
-                    <img src={messageIcon} alt="Msg" />
-                    <h1>Escribenos</h1>
+                    <img src={messageIcon} alt="" />
+                    <span>Escribenos</span>
                 </a>
             </div>
         </div>
         <div className='hero-image'>
-
             <div className='hero-red'>
                 <img className='pj1' src={pj1} alt="pj1" />
                 <img className='water-squirt' src={waterSquirt} alt="water-squirt" />
                 <img className='pipe-crack' src={pipeCrack} alt="pipe-crack" />
-                <img className='pipe' src={pipe} alt='pipe' />
+                <img className='pipe' src={pipe} alt='' />
             </div>
         </div>
     </div>

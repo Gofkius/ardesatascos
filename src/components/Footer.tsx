@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className='footer-container'>
       <div className='footer-content'>
         <div className='footer-section'>
-            <h1>Info</h1>
+            <h2>Info</h2>
             <ul>
                 <li><Link to="/aviso-legal">Aviso legal</Link></li>
                 <li><Link to="/politica-de-cookies">Política de Cookies</Link></li>
@@ -18,14 +18,14 @@ const Footer = () => {
             </ul>
         </div>
         <div className='footer-section'>
-            <h1>Navegación</h1>
+            <h2>Navegación</h2>
             <ul>
                 <li><Link to="/">Inicio</Link></li>
                 <li><a href="tel:+34608238809">Contacto</a></li>
             </ul>
         </div>
         <div className='footer-section-redes'>
-            <h1>Redes</h1>
+            <h2>Redes</h2>
             <div className='redes'>
                 <a href="https://www.facebook.com/Acondicionamientos.restauraciones/" target="_blank" rel="noopener noreferrer">
                     <img src={facebookIcon} alt="Facebook" />
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='footer-section'>
-            <h1>Contacto</h1>
+            <h2>Contacto</h2>
             <ul>
                 <li><a href="tel:+34608238809">+34 608 23 88 09</a></li>
                 <li><a href="mailto:reformasypinturas@outlook.com">reformasypinturas@outlook.com</a></li>

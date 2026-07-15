@@ -23,10 +23,10 @@
             color: inherit;
         }
 
-        h1{
+        span{
             font-size: 16px;
         }
-        h1 .navbar-callbutton{
+        .navbar-callbutton span{
             font-family: "Jersey 15";
         }
 
@@ -60,16 +60,16 @@
         
         .navbar-buttons {
             gap: 16px;
-            
-            h1 {
+
+            span {
                 font-size: 14px;
             }
-            
+
             .navbar-callbutton {
                 width: 110px;
                 height: 32px;
-                
-                h1 {
+
+                span {
                     font-size: 13px;
                 }
             }

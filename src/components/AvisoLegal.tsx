@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/LegalPage.css'
+import usePageMeta from '../lib/usePageMeta'
 
 const AvisoLegal = () => {
+  usePageMeta('Aviso Legal | AR Desatascos Tenerife', 'Aviso legal de AR Desatascos (Acondicionamientos y Restauraciones Tenerife SL), empresa de desatascos en Tenerife.')
+
   return (
     <div className='legal-page'>
       <Navbar />

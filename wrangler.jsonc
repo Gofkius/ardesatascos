@@ -1,3 +1,6 @@
 {
-  "name": "ar-tenerife"
+  "name": "ar-tenerife",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  }
 }

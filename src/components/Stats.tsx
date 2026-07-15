@@ -6,7 +6,7 @@ import metalPipe from '../assets/metal-pipe.png'
 const Stats = () => {
   return (
     <div className='stats-container'>
-        <img src={metalPipe} alt="MPipe" />
+        <img src={metalPipe} alt="" />
         <div className='stats'>
           <Statistic title='Desatascos realizados' number={15000}/>
           <Statistic title='Disponibilidad' text='24/7'/>

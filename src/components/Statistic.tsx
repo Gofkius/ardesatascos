@@ -9,17 +9,17 @@ type Props = {
 const Statistic = (props: Props) => {
   return (
     <div className='statistic'>
-      <h1 className='statistic-title'>
+      <p className='statistic-title'>
         {props.title}
-      </h1>
-      <h1 className='statistic-number'>
+      </p>
+      <p className='statistic-number'>
         {props.number ? 
         <>
           +
           <NumberTicker className='statistic-number' value={props.number}/>
         </> 
         : props.text}
-      </h1>
+      </p>
     </div>
   )
 }

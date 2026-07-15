@@ -1,7 +1,6 @@
 .services-container{
     display: flex;
-    margin: 0 auto;
-    max-width: 986px;
+    justify-content: center;
     position: relative;
     gap: 36px;
     margin-bottom: 128px;
@@ -47,7 +46,7 @@
             border-radius: 50px;
             background-color: red;
             height: 250px;
-            width: 250px;
+            width: 670px;
             margin-left: auto;
             display: flex;
             position: relative;

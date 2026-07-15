@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/LegalPage.css'
+import usePageMeta from '../lib/usePageMeta'
 
 const PoliticaPrivacidad = () => {
+  usePageMeta('Política de Privacidad | AR Desatascos Tenerife', 'Política de privacidad de AR Desatascos, empresa de desatascos en Tenerife.')
+
   return (
     <div className='legal-page'>
       <Navbar />
