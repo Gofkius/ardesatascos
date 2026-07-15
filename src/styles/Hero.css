@@ -3,7 +3,7 @@
 .hero-container{
     display: flex;
     justify-content: center;
-    height: 65svh;
+    min-height: 65svh;
     padding: 150px;
     gap: 150px;
 
@@ -13,14 +13,52 @@
         justify-content: center;
 
         .hook{
-            font-size: 36px;
-            width: 409px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 460px;
+
+            .hook-question{
+                font-size: clamp(24px, 2.6vw, 36px);
+                font-weight: 650;
+                line-height: 1.2;
+                letter-spacing: -0.01em;
+                text-wrap: balance;
+            }
+
+            .hook-punch{
+                font-family: "Jersey 15";
+                font-weight: 400;
+                font-size: clamp(40px, 4.4vw, 62px);
+                line-height: 0.95;
+                color: #E60000;
+            }
         }
+
         .sub-hook{
-            margin-top: 16px;
-            font-size: 16px;
-            color:rgb(0, 0, 0, 0.6);
-            width: 380px;
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 6px;
+            font-size: 15px;
+            color: rgb(0, 0, 0, 0.72);
+            max-width: 420px;
+
+            .hook-chip{
+                animation: chip-in 0.5s var(--ease-out-quart) both;
+            }
+            .hook-chip:nth-child(1){ animation-delay: 0.55s; }
+            .hook-chip:nth-child(2){ animation-delay: 0.65s; }
+            .hook-chip:nth-child(3){ animation-delay: 0.75s; }
+
+            .hook-chip::before{
+                content: "✓ ";
+                color: #E60000;
+                font-weight: 700;
+            }
         }
 
         .button-container{
@@ -48,12 +86,7 @@
                 color: #FFFFFF;
                 text-decoration: none;
                 cursor: pointer;
-                transition: background-color 0.2s ease, transform 0.15s ease;
-
-                &:hover {
-                    background-color: #3a3d44;
-                    transform: translateY(-2px);
-                }
+                transition: background-color 0.2s ease, transform 0.2s var(--ease-out-quart), box-shadow 0.2s var(--ease-out-quart);
             }
             .messagebutton{
                 gap: 4px;
@@ -67,12 +100,7 @@
                 color: #000000;
                 text-decoration: none;
                 cursor: pointer;
-                transition: background-color 0.2s ease, transform 0.15s ease;
-
-                &:hover {
-                    background-color: #7adc3e;
-                    transform: translateY(-2px);
-                }
+                transition: background-color 0.2s ease, transform 0.2s var(--ease-out-quart), box-shadow 0.2s var(--ease-out-quart);
             }
         }
     }
@@ -81,44 +109,16 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
-        
-        .hero-pipe{
-            position: relative;
 
-        }
         .hero-red{
-            background-color: red;
+            background-color: #E60000;
             border-radius: 45px;
             width: 520px;
             height: 490px;
             position: relative;
             z-index: -1;
+            box-shadow: var(--shadow-card);
 
-            .pj1, .water-squirt{
-                width: 100px;
-                height: 100px;
-            }
-
-            .pipe-crack{
-                width: 30px;
-                height: 30px;
-                position: absolute;
-                top: 270px;
-                left: 333px;
-                z-index: 1;
-            }
-
-            .pj1{
-                position: absolute;
-                top: 172px;
-                left: 200px;
-            }
-
-            .water-squirt{
-                position: absolute;
-                top: 172px;
-                left: 300px;
-            }
             .pipe{
                 position: absolute;
                 top: 0;
@@ -141,11 +141,50 @@
     }
 }
 
+@keyframes chip-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (hover: hover) {
+    .hero-container .button-container {
+        .callbutton:hover {
+            background-color: #3a3d44;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: var(--shadow-card);
+        }
+        .messagebutton:hover {
+            background-color: #7adc3e;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: var(--shadow-card);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-container {
+        .sub-hook .hook-chip {
+            animation: none;
+        }
+        .button-container .callbutton,
+        .button-container .messagebutton {
+            transition: none;
+        }
+    }
+}
+
 @media (max-width: 1150px) {
     .hero-container {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        min-height: 0;
         height: auto;
         padding: 60px 24px;
         gap: 32px;
@@ -155,17 +194,23 @@
             align-items: flex-start;
 
             .hook {
-                font-size: 26px;
-                width: 320px;
-                max-width: 320px;
+                max-width: 340px;
+                gap: 8px;
                 text-align: left;
+
+                .hook-question {
+                    font-size: 24px;
+                }
+                .hook-punch {
+                    font-size: 40px;
+                }
             }
             .sub-hook {
                 font-size: 14px;
-                width: 300px;
                 max-width: 300px;
                 text-align: left;
-                margin-top: 12px;
+                margin-top: 14px;
+                column-gap: 14px;
             }
 
             .button-container {
@@ -190,28 +235,6 @@
                 height: 311px;
                 border-radius: 35px;
 
-                .pj1, .water-squirt {
-                    width: 63px;
-                    height: 63px;
-                }
-
-                .pj1 {
-                    top: 88px;
-                    left: 127px;
-                }
-
-                .water-squirt {
-                    top: 88px;
-                    left: 190px;
-                }
-
-                .pipe-crack {
-                    width: 19px;
-                    height: 19px;
-                    top: 150px;
-                    left: 211px;
-                }
-
                 .pipe {
                     height: 100%;
                     width: auto;
@@ -220,16 +243,16 @@
                     -webkit-mask-image: linear-gradient(to right, black 97%, transparent 100%);
                     mask-image: linear-gradient(to right, black 97%, transparent 100%);
                 }
-                    .truck{
-                        position: absolute;
-                        top: -30px;
-                        left: 140px;
-                        height: 260px;
-                        width: 190px;
-                        object-fit: cover;
-                        object-position: left;
-                        overflow: hidden;
-                    }
+                .truck{
+                    position: absolute;
+                    top: -30px;
+                    left: 140px;
+                    height: 260px;
+                    width: 190px;
+                    object-fit: cover;
+                    object-position: left;
+                    overflow: hidden;
+                }
             }
         }
     }
@@ -247,13 +270,20 @@
             align-items: center;
 
             .hook {
-                font-size: 24px;
-                max-width: 300px;
+                max-width: 320px;
                 text-align: center;
+
+                .hook-question {
+                    font-size: 23px;
+                }
+                .hook-punch {
+                    font-size: 38px;
+                }
             }
             .sub-hook {
-                font-size: 15px;
+                font-size: 14px;
                 max-width: 320px;
+                justify-content: center;
                 text-align: center;
                 margin-top: 16px;
             }
@@ -279,28 +309,6 @@
                 width: 290px;
                 height: 273px;
                 border-radius: 30px;
-
-                .pj1, .water-squirt {
-                    width: 56px;
-                    height: 56px;
-                }
-
-                .pj1 {
-                    top: 78px;
-                    left: 112px;
-                }
-
-                .water-squirt {
-                    top: 78px;
-                    left: 168px;
-                }
-
-                .pipe-crack {
-                    width: 17px;
-                    height: 17px;
-                    top: 132px;
-                    left: 186px;
-                }
 
                 .pipe {
                     height: 100%;

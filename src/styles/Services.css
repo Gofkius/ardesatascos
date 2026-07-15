@@ -21,6 +21,8 @@
         padding: clamp(28px, 3.5vw, 44px);
         border-radius: clamp(32px, 4vw, 45px);
         box-sizing: border-box;
+        box-shadow: var(--shadow-card);
+        transition: transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
     }
 
     .service-desc{
@@ -28,31 +30,6 @@
         line-height: 1.5;
         max-width: 46ch;
         color: rgba(0, 0, 0, 0.62);
-    }
-
-    .pipe-container{
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        top: 33px;
-        left: -100vw;
-        right: calc(100% - 396px);
-        z-index: 10;
-        pointer-events: none;
-
-        .pipe-body {
-            flex: 1;
-            background-image: url('../assets/pipe-body.png');
-            background-repeat: repeat-x;
-            background-size: contain;
-            background-position: right center;
-        }
-
-        .pipe-head {
-            height: 270px;
-            width: auto;
-            flex-shrink: 0;
-        }
     }
 
     .services-main{
@@ -66,13 +43,6 @@
             flex: 1;
             min-height: 230px;
             position: relative;
-        }
-
-        .pj2{
-            position: absolute;
-            top: 250px;
-            left: 35px;
-            height: 100px;
         }
     }
 
@@ -116,6 +86,22 @@
     }
 }
 
+@media (hover: hover) {
+    .services-container .service-card:hover{
+        transform: translateY(-4px) scale(1.015);
+        box-shadow: var(--shadow-card-hover);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-container .service-card{
+        transition: none;
+    }
+    .services-container .service-card:hover{
+        transform: none;
+    }
+}
+
 @media (max-width: 700px) {
     .services-container {
         flex-direction: column;
@@ -123,20 +109,11 @@
         width: min(100% - 32px, 480px);
         margin-bottom: 64px;
 
-        .pipe-container {
-            display: none;
-        }
-
         .services-main, .services-side {
             gap: 20px;
 
             .service-card {
                 min-height: 0;
-            }
-
-            .pj2{
-                top: 94px;
-                height: 56px;
             }
         }
 

@@ -1,6 +1,5 @@
 .review-card {
     background-color: #f1f4fa;
-    border: 1px solid #a4aec8;
     border-radius: 20px;
     padding: 16px 24px 16px 24px;
     height: 175px;
@@ -9,6 +8,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
+}
+
+@media (hover: hover) {
+    .review-card:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shadow-card-hover);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-card {
+        transition: none;
+    }
+    .review-card:hover {
+        transform: none;
+    }
 }
 
 .review-stars {
@@ -23,7 +40,6 @@
 }
 
 .review-text {
-    font-family: 'Inter';
     font-size: 16px;
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -36,7 +52,7 @@
 .review-author {
     font-family: 'Jersey 15';
     font-size: 20px;
-    color: #a4aec8;
+    color: #5A6478;
     margin-top: 8px;
     align-self: baseline;
 }

@@ -40,12 +40,7 @@
             color: #FFFFFF;
             text-decoration: none;
             cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.15s ease;
-
-            &:hover {
-                background-color: #3a3d44;
-                transform: translateY(-2px);
-            }
+            transition: background-color 0.2s ease, transform 0.2s var(--ease-out-quart), box-shadow 0.2s var(--ease-out-quart);
         }
         .messagebutton{
             gap: 4px;
@@ -59,12 +54,30 @@
             color: #000000;
             text-decoration: none;
             cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.15s ease;
+            transition: background-color 0.2s ease, transform 0.2s var(--ease-out-quart), box-shadow 0.2s var(--ease-out-quart);
+        }
+    }
+}
 
-            &:hover {
-                background-color: #7adc3e;
-                transform: translateY(-2px);
-            }
+@media (hover: hover) {
+    .rehook-container .button-container {
+        .callbutton:hover {
+            background-color: #3a3d44;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: var(--shadow-card);
+        }
+        .messagebutton:hover {
+            background-color: #7adc3e;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: var(--shadow-card);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rehook-container .button-container {
+        .callbutton, .messagebutton {
+            transition: none;
         }
     }
 }

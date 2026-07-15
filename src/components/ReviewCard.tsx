@@ -11,12 +11,13 @@ type Review = {
 const ReviewCard = (props: Review) => {
   return (
     <div className="review-card">
-        <div className="review-stars">
+        <div className="review-stars" role="img" aria-label={`${props.stars} de 5 estrellas`}>
             {Array.from({ length: 5 }).map((_, i) => (
-                <img 
-                  key={i} 
+                <img
+                  key={i}
                   src={i < props.stars ? filledStar : unfilledStar}
-                  alt="star"
+                  alt=""
+                  aria-hidden="true"
                   className="star-icon"
                 />
             ))}

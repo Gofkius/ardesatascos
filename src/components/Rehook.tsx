@@ -10,7 +10,7 @@ const Rehook = () => {
   return (
     <div className='rehook-container'>
         <h2 className='hook'>
-            ¿Preparado a pedir un presupuesto?
+            ¿Listo para pedir tu presupuesto?
         </h2>
         <div className='button-container'>
             <a href={PHONE} className='callbutton'>
@@ -19,7 +19,7 @@ const Rehook = () => {
             </a>
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className='messagebutton'>
                 <img src={messageIcon} alt="" />
-                <span>Escribenos</span>
+                <span>Escríbenos</span>
             </a>
         </div>
     </div>

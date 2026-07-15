@@ -1,16 +1,9 @@
 import '../styles/Services.css'
 import { TextAnimate } from './ui/text-animate'
 
-/*import pipeHead from '../assets/pipe-head.png'
-import pj2 from '../assets/pj2.png'*/
-
 const Services = () => {
   return (
     <section className='services-container' aria-label='Servicios'>
-        {/*<div className='pipe-container'>
-            <div className='pipe-body'></div>
-            <img className='pipe-head' src={pipeHead} alt="Pipe Head" />
-        </div>*/}
         <div className='services-main'>
             <article className='service-card card-red'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
@@ -19,7 +12,6 @@ const Services = () => {
                 <p className='service-desc'>
                     Fregaderos, inodoros, bajantes y arquetas. Intervención rápida y sin obras.
                 </p>
-                {/*<img className='pj2' src={pj2} alt="PJ2" />*/}
             </article>
             <article className='service-card card-light'>
                 <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
