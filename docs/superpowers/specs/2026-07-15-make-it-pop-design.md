@@ -17,12 +17,12 @@ The site reads as flat and empty. Keep the existing identity (hero composition, 
 
 ### 1. Hero text (more engaging, less flat)
 
-- The h1 splits into two beats inside one heading:
-  - Question — "¿El agua no traga y los olores no te dejan vivir?" — Inter at ~650 weight, fluid `clamp()` size (~26→38px), `text-wrap: balance`.
-  - Punch — "Lo solucionamos ahora." — Jersey 15, brand red `#E60000`, larger (`clamp()` ~40→62px). Ties the pixel voice into the headline instead of leaving it a button quirk.
-  - Both keep the word-by-word TextAnimate entrance (punch delayed).
-- Sub-hook becomes a checklist chip row: "Disponible 24/7 · Presupuesto gratuito · Sin compromiso", each with a red "✓" (CSS `::before`), CSS fade-up entrance with `both` fill (content never gated on JS), disabled under `prefers-reduced-motion`.
-- Requires removing the global `* { font-family: "Inter"; font-weight: 400 }` rule in `index.css` (the `margin: 0` reset stays). Side effect: explicit `font-weight: 300` headings (Services, Gallery, Rehook) now render true 300 via Inter Variable.
+**REVISED after user review (2026-07-15):** the two-beat headline (Jersey 15 red punch line) and the checklist chips were rejected — the red display text read as off-brand/AI-generated. The hero text reverted to the original single h1 + sub-hook sentence (with the "¡…!" and "Escríbenos" copy fixes retained). The global `* { font-family; font-weight: 400 }` removal stays (index.css hygiene), as do the section shadows and hover effects.
+
+Original (rejected) direction, kept for the record:
+
+- The h1 splits into two beats inside one heading: question in Inter ~650, punch "Lo solucionamos ahora." in Jersey 15 brand red.
+- Sub-hook as a checklist chip row with red "✓" marks.
 
 ### 2. Depth — one shadow system
 

@@ -13,52 +13,14 @@
         justify-content: center;
 
         .hook{
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 460px;
-
-            .hook-question{
-                font-size: clamp(24px, 2.6vw, 36px);
-                font-weight: 650;
-                line-height: 1.2;
-                letter-spacing: -0.01em;
-                text-wrap: balance;
-            }
-
-            .hook-punch{
-                font-family: "Jersey 15";
-                font-weight: 400;
-                font-size: clamp(40px, 4.4vw, 62px);
-                line-height: 0.95;
-                color: #E60000;
-            }
+            font-size: 36px;
+            width: 409px;
         }
-
         .sub-hook{
-            margin-top: 20px;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 20px;
-            row-gap: 6px;
-            font-size: 15px;
-            color: rgb(0, 0, 0, 0.72);
-            max-width: 420px;
-
-            .hook-chip{
-                animation: chip-in 0.5s var(--ease-out-quart) both;
-            }
-            .hook-chip:nth-child(1){ animation-delay: 0.55s; }
-            .hook-chip:nth-child(2){ animation-delay: 0.65s; }
-            .hook-chip:nth-child(3){ animation-delay: 0.75s; }
-
-            .hook-chip::before{
-                content: "✓ ";
-                color: #E60000;
-                font-weight: 700;
-            }
+            margin-top: 16px;
+            font-size: 16px;
+            color: rgb(0, 0, 0, 0.6);
+            width: 380px;
         }
 
         .button-container{
@@ -141,17 +103,6 @@
     }
 }
 
-@keyframes chip-in {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @media (hover: hover) {
     .hero-container .button-container {
         .callbutton:hover {
@@ -169,9 +120,6 @@
 
 @media (prefers-reduced-motion: reduce) {
     .hero-container {
-        .sub-hook .hook-chip {
-            animation: none;
-        }
         .button-container .callbutton,
         .button-container .messagebutton {
             transition: none;
@@ -194,23 +142,17 @@
             align-items: flex-start;
 
             .hook {
-                max-width: 340px;
-                gap: 8px;
+                font-size: 26px;
+                width: 320px;
+                max-width: 320px;
                 text-align: left;
-
-                .hook-question {
-                    font-size: 24px;
-                }
-                .hook-punch {
-                    font-size: 40px;
-                }
             }
             .sub-hook {
                 font-size: 14px;
+                width: 300px;
                 max-width: 300px;
                 text-align: left;
-                margin-top: 14px;
-                column-gap: 14px;
+                margin-top: 12px;
             }
 
             .button-container {
@@ -270,20 +212,15 @@
             align-items: center;
 
             .hook {
-                max-width: 320px;
+                font-size: 24px;
+                width: auto;
+                max-width: 300px;
                 text-align: center;
-
-                .hook-question {
-                    font-size: 23px;
-                }
-                .hook-punch {
-                    font-size: 38px;
-                }
             }
             .sub-hook {
-                font-size: 14px;
+                font-size: 15px;
+                width: auto;
                 max-width: 320px;
-                justify-content: center;
                 text-align: center;
                 margin-top: 16px;
             }

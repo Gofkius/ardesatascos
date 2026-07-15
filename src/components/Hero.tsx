@@ -13,19 +13,12 @@ const Hero = () => {
   return (
     <div className='hero-container'>
         <div className='hero-hook'>
-            <h1 className='hook'>
-                <TextAnimate as="span" animation="fadeIn" by="word" className='hook-question'>
-                    ¿El agua no traga y los olores no te dejan vivir?
-                </TextAnimate>
-                <TextAnimate as="span" animation="fadeIn" by="word" delay={0.35} className='hook-punch'>
-                    Lo solucionamos ahora.
-                </TextAnimate>
-            </h1>
-            <ul className='sub-hook'>
-                <li className='hook-chip'>Disponible 24/7</li>
-                <li className='hook-chip'>Presupuesto gratuito</li>
-                <li className='hook-chip'>Sin compromiso</li>
-            </ul>
+            <TextAnimate as="h1" animation="fadeIn" by="word" className='hook'>
+                ¿El agua no traga y los olores no te dejan vivir? Lo solucionamos ahora.
+            </TextAnimate>
+            <TextAnimate animation="fadeIn" by="word" delay={0.25} className='sub-hook'>
+                Servicio disponible 24/7, ¡presupuestos gratuitos y sin compromiso!
+            </TextAnimate>
             <div className='button-container'>
                 <a href={PHONE} className='callbutton'>
                     <img src={callIcon} alt="" />
