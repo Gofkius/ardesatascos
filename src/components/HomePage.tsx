@@ -1,7 +1,6 @@
 import Navbar from './Navbar'
 import Hero from './Hero'
 import Stats from './Stats'
-import Reviews from './Reviews'
 import Services from './Services'
 import Gallery from './Gallery'
 import Rehook from './Rehook'
@@ -14,7 +13,6 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <Stats />
-      <Reviews />
       <Services />
       <Gallery />
       <Rehook />
