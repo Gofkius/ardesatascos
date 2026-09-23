@@ -25,7 +25,7 @@ const PoliticaPrivacidad = () => {
             <li><strong>Nombre comercial:</strong> AR Tenerife</li>
             <li><strong>CIF:</strong> B76781244</li>
             <li><strong>Actividad:</strong> Servicios de desatascos y fontanería</li>
-            <li><strong>Contacto:</strong> reformasypinturas@outlook.com | +34 608 23 88 09</li>
+            <li><strong>Contacto:</strong> desatascosartenerife@outlook.es | +34 608 23 88 09</li>
           </ul>
         </section>
 
@@ -72,7 +72,7 @@ const PoliticaPrivacidad = () => {
             <li><strong>Limitación:</strong> Solicitar la restricción del tratamiento.</li>
           </ul>
           <p>
-            Para ejercer cualquiera de estos derechos, contáctanos en <strong>reformasypinturas@outlook.com</strong> (Acondicionamientos y Restauraciones Tenerife SL, CIF: B76781244). También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>.
+            Para ejercer cualquiera de estos derechos, contáctanos en <strong>desatascosartenerife@outlook.es</strong> (Acondicionamientos y Restauraciones Tenerife SL, CIF: B76781244). También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>.
           </p>
         </section>
 

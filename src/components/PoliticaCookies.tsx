@@ -71,7 +71,7 @@ const PoliticaCookies = () => {
         <section>
           <h2>6. Contacto</h2>
           <p>
-            Para cualquier consulta sobre esta política, puedes contactarte con <strong>Acondicionamientos y Restauraciones Tenerife SL</strong> (CIF: B76781244) en: <strong>reformasypinturas@outlook.com</strong> o llamar al <strong>+34 608 23 88 09</strong>.
+            Para cualquier consulta sobre esta política, puedes contactarte con <strong>Acondicionamientos y Restauraciones Tenerife SL</strong> (CIF: B76781244) en: <strong>desatascosartenerife@outlook.es</strong> o llamar al <strong>+34 608 23 88 09</strong>.
           </p>
         </section>
       </div>

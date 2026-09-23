@@ -29,7 +29,7 @@ const AvisoLegal = () => {
             <li><strong>CIF:</strong> B76781244</li>
             <li><strong>Actividad:</strong> Servicios de desatascos y fontanería</li>
             <li><strong>Teléfono:</strong> +34 608 23 88 09</li>
-            <li><strong>Correo electrónico:</strong> reformasypinturas@outlook.com</li>
+            <li><strong>Correo electrónico:</strong> desatascosartenerife@outlook.es</li>
           </ul>
         </section>
 

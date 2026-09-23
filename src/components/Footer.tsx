@@ -42,7 +42,7 @@ const Footer = () => {
             <h2>Contacto</h2>
             <ul>
                 <li><a href="tel:+34608238809">+34 608 23 88 09</a></li>
-                <li><a href="mailto:reformasypinturas@outlook.com">reformasypinturas@outlook.com</a></li>
+                <li><a href="mailto:desatascosartenerife@outlook.es">desatascosartenerife@outlook.es</a></li>
             </ul>
         </div>
       </div>
