@@ -21,20 +21,23 @@ const Footer = () => {
             <h2>Navegación</h2>
             <ul>
                 <li><Link to="/">Inicio</Link></li>
-                <li><a href="tel:+34608238809">Contacto</a></li>
+                <li><a href="/#servicios">Servicios de desatascos</a></li>
+                <li><a href="/#zonas">Zonas en Tenerife</a></li>
+                <li><a href="/#faq">Precios y preguntas frecuentes</a></li>
+                <li><a href="tel:+34608238809">Contacto urgente 24h</a></li>
             </ul>
         </div>
         <div className='footer-section-redes'>
             <h2>Redes</h2>
             <div className='redes'>
                 <a href="https://www.facebook.com/Acondicionamientos.restauraciones/" target="_blank" rel="noopener noreferrer">
-                    <img src={facebookIcon} alt="Facebook" />
+                    <img src={facebookIcon} alt="Facebook AR Desatascos Tenerife" width={25} height={25} />
                 </a>
                 <a href="https://www.instagram.com/ar.tenerife.sl/" target="_blank" rel="noopener noreferrer">
-                    <img src={instagramIcon} alt="Instagram" />
+                    <img src={instagramIcon} alt="Instagram AR Desatascos Tenerife" width={25} height={25} />
                 </a>
                 <a href="https://wa.me/34608238809?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20para%20un%20desatasco." target="_blank" rel="noopener noreferrer">
-                    <img src={whatsappIcon} alt="WhatsApp" />
+                    <img src={whatsappIcon} alt="WhatsApp AR Desatascos Tenerife" width={25} height={25} />
                 </a>
             </div>
         </div>

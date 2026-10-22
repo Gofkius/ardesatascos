@@ -61,6 +61,10 @@
         .navbar-buttons {
             gap: 16px;
 
+            .navbar-link-hide-mobile {
+                display: none;
+            }
+
             span {
                 font-size: 14px;
             }

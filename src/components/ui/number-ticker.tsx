@@ -48,7 +48,7 @@ export function NumberTicker({
     () =>
       springValue.on("change", (latest) => {
         if (ref.current) {
-          ref.current.textContent = Intl.NumberFormat("en-US", {
+          ref.current.textContent = Intl.NumberFormat("es-ES", {
             minimumFractionDigits: decimalPlaces,
             maximumFractionDigits: decimalPlaces,
           }).format(Number(latest.toFixed(decimalPlaces)))
@@ -56,6 +56,11 @@ export function NumberTicker({
       }),
     [springValue, decimalPlaces]
   )
+
+  const initialFormatted = Intl.NumberFormat("es-ES", {
+    minimumFractionDigits: decimalPlaces,
+    maximumFractionDigits: decimalPlaces,
+  }).format(value)
 
   return (
     <span
@@ -66,7 +71,7 @@ export function NumberTicker({
       )}
       {...props}
     >
-      {startValue}
+      {initialFormatted}
     </span>
   )
 }

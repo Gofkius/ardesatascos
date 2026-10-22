@@ -15,16 +15,19 @@ const routes = [
     path: '/aviso-legal',
     title: 'Aviso Legal | AR Desatascos Tenerife',
     description: 'Aviso legal de AR Desatascos (Acondicionamientos y Restauraciones Tenerife SL), empresa de desatascos en Tenerife.',
+    noindex: true,
   },
   {
     path: '/politica-de-cookies',
     title: 'Política de Cookies | AR Desatascos Tenerife',
     description: 'Política de cookies del sitio web de AR Desatascos, empresa de desatascos en Tenerife.',
+    noindex: true,
   },
   {
     path: '/politica-de-privacidad',
     title: 'Política de Privacidad | AR Desatascos Tenerife',
     description: 'Política de privacidad de AR Desatascos, empresa de desatascos en Tenerife.',
+    noindex: true,
   },
 ]
 
@@ -45,6 +48,13 @@ for (const route of routes) {
       .replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${route.description}"`)
       .replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${route.title}"`)
       .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${route.description}"`)
+  }
+
+  if (route.noindex) {
+    html = html.replace(
+      /<meta name="robots" content="[^"]*"/,
+      '<meta name="robots" content="noindex, follow"'
+    )
   }
 
   // Flat files (aviso-legal.html) so Cloudflare serves /aviso-legal with a

@@ -5,7 +5,11 @@ import '../styles/LegalPage.css'
 import usePageMeta from '../lib/usePageMeta'
 
 const NotFound = () => {
-  usePageMeta('Página no encontrada | AR Desatascos Tenerife', 'La página que buscas no existe. Vuelve al inicio o llámanos: 608 23 88 09.')
+  usePageMeta(
+    'Página no encontrada | AR Desatascos Tenerife',
+    'La página que buscas no existe. Vuelve al inicio o llámanos: 608 23 88 09.',
+    { noindex: true }
+  )
 
   return (
     <div className='legal-page'>

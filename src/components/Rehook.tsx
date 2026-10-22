@@ -8,21 +8,21 @@ const WHATSAPP = 'https://wa.me/34608238809?text=Hola%2C%20me%20gustar%C3%ADa%20
 
 const Rehook = () => {
   return (
-    <div className='rehook-container'>
+    <section className='rehook-container' aria-label='Solicitar presupuesto gratuito de desatasco en Tenerife'>
         <h2 className='hook'>
             ¿Listo para pedir tu presupuesto?
         </h2>
         <div className='button-container'>
             <a href={PHONE} className='callbutton'>
-                <img src={callIcon} alt="" />
+                <img src={callIcon} alt="" width={20} height={20} />
                 <span>Llámanos</span>
             </a>
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className='messagebutton'>
-                <img src={messageIcon} alt="" />
+                <img src={messageIcon} alt="" width={20} height={20} />
                 <span>Escríbenos</span>
             </a>
         </div>
-    </div>
+    </section>
   )
 }
 

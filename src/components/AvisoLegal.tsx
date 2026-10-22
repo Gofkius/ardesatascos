@@ -5,7 +5,11 @@ import '../styles/LegalPage.css'
 import usePageMeta from '../lib/usePageMeta'
 
 const AvisoLegal = () => {
-  usePageMeta('Aviso Legal | AR Desatascos Tenerife', 'Aviso legal de AR Desatascos (Acondicionamientos y Restauraciones Tenerife SL), empresa de desatascos en Tenerife.')
+  usePageMeta(
+    'Aviso Legal | AR Desatascos Tenerife',
+    'Aviso legal de AR Desatascos (Acondicionamientos y Restauraciones Tenerife SL), empresa de desatascos en Tenerife.',
+    { noindex: true, canonicalPath: '/aviso-legal' }
+  )
 
   return (
     <div className='legal-page'>

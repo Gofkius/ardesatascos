@@ -5,7 +5,11 @@ import '../styles/LegalPage.css'
 import usePageMeta from '../lib/usePageMeta'
 
 const PoliticaPrivacidad = () => {
-  usePageMeta('Política de Privacidad | AR Desatascos Tenerife', 'Política de privacidad de AR Desatascos, empresa de desatascos en Tenerife.')
+  usePageMeta(
+    'Política de Privacidad | AR Desatascos Tenerife',
+    'Política de privacidad de AR Desatascos, empresa de desatascos en Tenerife.',
+    { noindex: true, canonicalPath: '/politica-de-privacidad' }
+  )
 
   return (
     <div className='legal-page'>

@@ -1,0 +1,115 @@
+.zones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100% - 32px, 986px);
+    margin-inline: auto;
+    margin-bottom: 128px;
+
+    .zones-title {
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .zones-subtitle {
+        margin-top: 10px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        max-width: 66ch;
+        line-height: 1.5;
+    }
+
+    .zones-grid {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(20px, 2.5vw, 28px);
+        width: 100%;
+    }
+
+    .zone-card {
+        background-color: #F1F4FA;
+        border-radius: 35px;
+        padding: clamp(24px, 3vw, 34px);
+        box-shadow: var(--shadow-card);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition: transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
+
+        h3 {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #24262B;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.62);
+        }
+
+        .zone-list {
+            margin-top: 4px;
+            padding-left: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 14px;
+            color: #24262B;
+            line-height: 1.4;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .zones-container .zone-card:hover {
+        transform: translateY(-4px) scale(1.015);
+        box-shadow: var(--shadow-card-hover);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zones-container .zone-card {
+        transition: none;
+    }
+    .zones-container .zone-card:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .zones-container .zones-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .zones-container {
+        margin-bottom: 64px;
+
+        .zones-title {
+            font-size: 28px;
+        }
+
+        .zones-subtitle {
+            font-size: 15px;
+        }
+
+        .zones-grid {
+            margin-top: 32px;
+        }
+
+        .zone-card {
+            border-radius: 28px;
+            padding: 24px;
+        }
+    }
+}
+

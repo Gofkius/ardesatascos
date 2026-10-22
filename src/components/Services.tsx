@@ -1,45 +1,54 @@
 import '../styles/Services.css'
-import { TextAnimate } from './ui/text-animate'
 
 const Services = () => {
   return (
-    <section className='services-container' aria-label='Servicios'>
+    <section id='servicios' className='services-section' aria-labelledby='servicios-heading'>
+      <div className='services-header'>
+        <h2 id='servicios-heading' className='services-title'>
+          Especialistas en desatascos en Tenerife 24 horas
+        </h2>
+        <p className='services-subtitle'>
+          Empresa de desatascos urgentes de tuberías para particulares, comunidades de propietarios y negocios en toda la isla de Tenerife.
+        </p>
+      </div>
+      <div className='services-container'>
         <div className='services-main'>
             <article className='service-card card-red'>
-                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
-                    Desatascos domésticos
-                </TextAnimate>
+                <h3 className='text'>
+                    Desatascos domésticos y de urgencia
+                </h3>
                 <p className='service-desc'>
-                    Fregaderos, inodoros, bajantes y arquetas. Intervención rápida y sin obras.
+                    Desatasco de tuberías, fregaderos, inodoros, duchas, bajantes, sifones y arquetas en viviendas y comunidades de vecinos. Intervención rápida las 24 horas y sin obras.
                 </p>
             </article>
             <article className='service-card card-light'>
-                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
+                <h3 className='text'>
                     Localización de fugas de agua mediante gas traza y geófono
-                </TextAnimate>
+                </h3>
                 <p className='service-desc'>
-                    Detectamos la fuga con precisión, sin abrir paredes ni suelos innecesariamente.
+                    Detectamos fugas ocultas e inspeccionamos tuberías con cámara, gas trazador y geófono acústico de alta precisión, sin romper paredes ni suelos innecesariamente.
                 </p>
             </article>
         </div>
         <div className='services-side'>
             <article className='service-card card-light card-tall'>
-                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
-                    Desatasco con camión de agua a presión
-                </TextAnimate>
+                <h3 className='text'>
+                    Desatasco de tuberías con camión de agua a presión
+                </h3>
                 <p className='service-desc'>
-                    Limpieza de tuberías y colectores con agua a alta presión.
+                    Limpieza y desatasco de redes de saneamiento, colectores generales, arquetas y alcantarillado en Tenerife mediante camión impulsor de agua a alta presión.
                 </p>
             </article>
             <article className='service-card card-green'>
-                <TextAnimate as="h2" animation="fadeIn" by="word" className="text">
-                    Camión cuba
-                </TextAnimate>
+                <h3 className='text'>
+                    Camión cuba en Tenerife
+                </h3>
                 <p className='service-desc'>
-                    Vaciado de fosas sépticas y pozos negros.
+                    Vaciado, absorción y limpieza de fosas sépticas, pozos negros, aljibes e inundaciones en garajes o sótanos.
                 </p>
             </article>
         </div>
+      </div>
     </section>
   )
 }

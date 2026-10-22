@@ -5,7 +5,11 @@ import '../styles/LegalPage.css'
 import usePageMeta from '../lib/usePageMeta'
 
 const PoliticaCookies = () => {
-  usePageMeta('Política de Cookies | AR Desatascos Tenerife', 'Política de cookies del sitio web de AR Desatascos, empresa de desatascos en Tenerife.')
+  usePageMeta(
+    'Política de Cookies | AR Desatascos Tenerife',
+    'Política de cookies del sitio web de AR Desatascos, empresa de desatascos en Tenerife.',
+    { noindex: true, canonicalPath: '/politica-de-cookies' }
+  )
 
   return (
     <div className='legal-page'>

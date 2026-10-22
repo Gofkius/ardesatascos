@@ -15,6 +15,18 @@
         .hook{
             font-size: 36px;
             width: 409px;
+            line-height: 1.2;
+
+            .hero-kicker{
+                display: block;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: #E60000;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
         }
         .sub-hook{
             margin-top: 16px;
@@ -83,6 +95,8 @@
 
             .pipe{
                 position: absolute;
+                width: 140%;
+                height: auto;
                 top: 0;
                 left: -100px;
                 -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);

@@ -8,11 +8,30 @@ const modules = import.meta.glob('../assets/gallery/*.{jpg,jpeg,png,webp,avif,sv
   import: 'default',
 })
 
+const ALT_MAP: Record<string, string> = {
+  '04-localizacioncama': 'Inspección de tuberías con cámara TV y localización de arquetas en Tenerife',
+  '05-localizacioncama': 'Detección de fugas de agua y atascos con cámara de inspección en Tenerife',
+  '06-localizacioncama': 'Equipo profesional de localización de tuberías y fugas sin obras en Tenerife',
+  '07-localizacioncama': 'Técnico especialista en desatascos e inspección de redes de saneamiento en Tenerife',
+  '08-localizacioncama': 'Reparación y localización de averías en tuberías de desagüe en Tenerife',
+  '09-localizacioncama': 'Furgón equipado para desatascos urgentes 24 horas y detección de fugas en Tenerife',
+  '10-localizacioncama': 'Inspección técnica de bajantes y colectores en comunidad de propietarios en Tenerife',
+  '11-localizacioncama': 'Localización exacta de atasco en tubería enterrada mediante sonda y cámara en Tenerife',
+  '12-localizacioncama': 'Servicio de desatasco y diagnóstico de tuberías con geófono y gas traza en Tenerife',
+  '13-localizacioncama': 'Trabajos de fontanería técnica y localización de fugas ocultas en Tenerife',
+  '15-espacioconfinado': 'Limpieza y desatasco profesional en espacios confinados, arquetas y fosas sépticas en Tenerife',
+  '16-desatasco-domestico': 'Desatasco doméstico urgente de tuberías y desagües en vivienda de Tenerife',
+  '17-desatasco-domestico': 'Maquinaria profesional para desatascos domésticos de fregaderos y baños en Tenerife',
+  '18-desatasco-domestico': 'Intervención rápida de desatasco de tuberías sin obras en Tenerife',
+}
+
 const photos = Object.keys(modules)
   .sort()
   .map((path) => {
     const file = path.split('/').pop() ?? ''
-    const alt = file.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ')
+    const baseName = file.replace(/\.[^.]+$/, '')
+    const fallbackAlt = baseName.replace(/^\d+[-_]+/, '').replace(/[-_]+/g, ' ')
+    const alt = ALT_MAP[baseName] ?? `Desatascos en Tenerife - ${fallbackAlt}`
     return { src: modules[path] as string, alt }
   })
 
@@ -41,9 +60,9 @@ const Gallery = () => {
   if (photos.length === 0) return null
 
   return (
-    <section className='gallery-container' aria-label='Galería de trabajos'>
-      <h2 className='gallery-title'>Nuestros trabajos</h2>
-      <p className='gallery-subtitle'>Fotos reales de nuestros servicios en Tenerife.</p>
+    <section className='gallery-container' aria-label='Galería de trabajos de desatascos en Tenerife'>
+      <h2 className='gallery-title'>Nuestros trabajos de desatascos en Tenerife</h2>
+      <p className='gallery-subtitle'>Fotos reales de desatascos urgentes, camión cuba, agua a presión y localización de fugas en Tenerife Norte y Sur.</p>
       <div className='gallery-frame' aria-roledescription='carrusel'>
         <div className='gallery-track' ref={trackRef} onScroll={handleScroll}>
           {photos.map((photo, i) => (
@@ -59,16 +78,20 @@ const Gallery = () => {
                 src={photo.src}
                 alt=''
                 aria-hidden='true'
-                loading={i === 0 ? 'eager' : 'lazy'}
+                loading='lazy'
                 decoding='async'
+                width={900}
+                height={600}
                 draggable={false}
               />
               <img
                 className='gallery-photo'
                 src={photo.src}
                 alt={photo.alt}
-                loading={i === 0 ? 'eager' : 'lazy'}
+                loading='lazy'
                 decoding='async'
+                width={900}
+                height={600}
                 draggable={false}
               />
             </div>
